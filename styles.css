@@ -1,0 +1,952 @@
+/* 全体リセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 色の変数 */
+  :root {
+    --primary-color: #204eb1;
+    --secondary-color: #01579b;
+    --accent-color: #FFC107;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --light-gray: #eaeaea;
+    --dark-gray: #555;
+    --white: #ffffff;
+    --success-color: #4CAF50;
+    --success-hover: #45a049;
+    --red:#ff3c00;
+    --cta-color: #09186b;
+    --cta-hover: #1f2b6b;
+    --border-color: #ddd;
+    --dot-color: #bbb;
+    --dot-active-color: var(--primary-color);
+    --card-bg-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --question-color-hover:#d0e2ff; 
+    --question-color-background:#f7f9fd; 
+  }
+  
+  /* グローバル設定 */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+
+  
+  
+  /* スライドショー */
+  .slideshow {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+  }
+  .slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  .slideshow img.active {
+    opacity: 1;
+  }
+  
+  /* Hero Text inside Slideshow */
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  }
+  .hero-text p {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-top: 10px;
+  }
+  
+  /* ナビゲーション */
+  nav {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo-container img {
+    height: 30px;
+    width: 30px;
+  }
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  .nav-menu li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .nav-menu li a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+  }
+  .language-switch {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .flag-icon {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    transition: transform 0.2s ease;
+  }
+  .flag-icon:hover {
+    transform: scale(1.1);
+    
+  }
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--white);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 20;
+  }
+  .hamburger:hover {
+    color: var(--accent-color);
+  }
+  
+  /* セクション設定 */
+  section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  #hero {
+    background: url(img/Lake.jpg);
+    background-attachment: fixed; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+  }
+  .hero-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 90vw;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* About Me Section */
+  .backGroundStory-section-title {
+    font-size: 1.8rem;
+    color: var(--cta-color);
+    font-weight: bold;
+    margin-top: 2%;
+  }
+  .backGroundStory-section-contents {
+    max-width: 90vw;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 2%;
+    font-size: 1rem;
+    color: var(--cta-color);
+    text-align: justify;
+    
+  }
+  .backGroundStory-section-contents p {
+    margin-bottom: 1.5%;
+    text-align: center;
+  }
+  
+  /* ボタンとアイコン */
+ /* Button and Icon Styling */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  /* Common Style for All Buttons */
+  .icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    color: var(--card-bg-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect */
+  .icon-btn:hover {
+    background-color:var(--accent-color);
+    transform: scale(1.1);
+  }
+  
+  /* FontAwesome Icons */
+  .icon-btn i {
+    font-size: 1.5rem;
+  }
+  
+  /* タブメニュー */
+  .tab-menu {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .tab-btn {
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--dark-gray);
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+  }
+  .tab-btn:hover {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+  }
+  .tab-btn.active {
+    color: var(--secondary-color);
+    border-bottom: 3px solid var(--secondary-color);
+  }
+  
+  /* タブコンテンツ */
+  .tab-content {
+    display: none;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: var(--background-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 90vw;
+    width: 100%;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    line-height: 1.6;
+    list-style-type: none;
+  }
+
+  .tab-content ul, li{
+
+    list-style: none; 
+  }
+  .tab-content.active {
+    display: block;
+    opacity: 1;
+    text-align: center;
+    transform: translateY(0);
+  }
+  
+  /* タブ矢印 */
+  .tab-arrows {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .tab-arrows button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 0 10px;
+    color: var(--primary-color);
+    transition: color 0.3s;
+  }
+  .tab-arrows button:hover {
+    color: var(--accent-color);
+  }
+  
+  /* セクション背景色 */
+  #about, #skills {
+    background-color: var(--white);
+  }
+  #projects, #contact {
+    background-color: var(--light-gray);
+  }
+  
+  /* Projectsセクション */
+  #projects {
+    background-color: var(--background-color);
+    text-align: center;
+  }
+  #projects h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+  }
+  .project-carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 90vw;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .project-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+  }
+  .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .project-card {
+    flex: 1 1 50%;
+    display: flex;
+    min-width: 500px;
+    margin: 0 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: var(--card-bg-color);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .project-card img {
+    width: 200px;
+    height:200px;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+  }
+  .project-card:hover {
+    transform: translateY(-5px);
+    
+  }
+  .project-content {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+  }
+  .project-details {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .project-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  .project-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  .project-details li {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    color: var(--text-color);
+  }
+  .carousel-btn {
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    color: var(--card-bg-color);
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .carousel-btn:hover {
+    color: var(--accent-color);
+  }
+  .left-btn {
+    left: 0;
+  }
+  .right-btn {
+    right: 0;
+  }
+  .carousel-dots {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .carousel-dots .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: var(--dot-color);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .carousel-dots .dot.active {
+    background-color: var(--dot-active-color);
+  }
+  
+  /* モーダル */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .modal-content {
+    background-color: var(--white);
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    
+    text-align: center;
+    position: relative;
+  }
+  .close-btn {
+    color: var(--dark-gray);
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  .close-btn:hover {
+    color: var(--accent-color);
+  }
+  .modal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  .modal-table th,
+  .modal-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  .modal-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    width: 30%;
+  }
+  .modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    max-width: 50vh;
+    max-height:50vh;
+    object-fit: cover;
+  }
+  .modal-link a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .modal-link a:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  /* Skillsセクション */
+  #skills {
+    text-align: center;
+    padding: 50px 0;
+    background-color: var(--background-color);
+    max-width: 90vw;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #skills h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .skill-card {
+    flex: 0 0 auto;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.5s;
+    position: relative;
+  }
+  .skill-card:hover {
+    transform: scale(1.1);
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  .skill-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  /* Marquee */
+  .marquee {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+  }
+  .marquee-content {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    animation: marquee-scroll 20s linear infinite;
+  }
+  .marquee-content li {
+    flex-shrink: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  @keyframes marquee-scroll {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-50%); }
+  }
+  
+  /* パララックス */
+  .parallax-section {
+    background-image: url('img/parallax.jpg'); 
+    height: 400px;
+    background-attachment: fixed; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  .parallax-content {
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 20px 40px;
+    border-radius: 8px;
+  }
+  .parallax-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  /* Common Style for All Buttons */
+  .icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    color: var(--card-bg-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect */
+  .icon-btn:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.1);
+  }
+  
+  /* FontAwesome Icons */
+  .icon-btn i {
+    font-size: 1.5rem;
+  }
+  
+  
+  /* FAQセクション */
+  #faq {
+    padding: 60px 20px;
+    background-color:var(--card-bg-color);
+    text-align: center;
+  }
+  #faq h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  .faq-item {
+    width: 80%;
+    max-width: 90vw;
+    width: 100%;
+    margin: 0 auto;
+    
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+  }
+  .faq-item:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  .faq-question {
+    width: 100%;
+   
+    padding: 18px 20px;
+    background-color: var(--question-color-background);
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+    transition: background-color 0.3s;
+  }
+  .faq-question:hover {
+    background-color: var(--question-color-hover);
+  }
+  .faq-question .icon {
+    margin-right: 10px;
+  }
+  .toggle-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+  }
+  .faq-answer {
+    display: none;
+    padding: 15px 20px;
+    background-color: var(--card-bg-color);
+    text-align: center;
+    border-top: 1px solid #ccc;
+    font-size: 1rem;
+    color: var(--cta-hover);
+    animation: fadeIn 0.5s ease;
+  }
+  .faq-answer.active {
+    display: block;
+  }
+  .faq-question.active .toggle-icon {
+    transform: rotate(45deg);
+  }
+  
+  /* ステップフォーム */
+  #step-form {
+    max-width: 90vw;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+  }
+  .step-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .step-btn {
+    padding: 10px 20px;
+    border: none;
+    background: var(--light-gray);
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .step-btn.active {
+    background: var(--primary-color);
+    color: white;
+  }
+  .step {
+    display: none;
+    padding: 20px;
+    background: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px var(--shadow-color);
+  }
+  .step.active {
+    display: block;
+  }
+  label {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background: var(--white);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: all 0.3s ease;
+  }
+  label:hover {
+    background: var(--light-gray);
+  }
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  .next-btn {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+  }
+  .next-btn:hover {
+    background: var(--secondary-color);
+  }
+  .error-message-contact {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--red);
+    font-weight: bold;
+  }
+  #contact-form-section {
+    max-width: 90vw;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+  }
+  #contact-form label {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  #contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  .btn-submit {
+    width: 80%;
+    padding: 12px;
+    margin: 0 auto;
+    background: var(--cta-color);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  .btn-submit:hover {
+    background: var(--cta-hover);
+    color: var(--accent-color);
+  }
+  .scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--cta-color);
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .scroll-top:hover {
+    background-color: var(--accent-color);
+  }
+  footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  /* モバイル表示 */
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+      position: absolute;
+      align-items: center;
+      top: 60px;
+      right: 0;
+      background-color: var(--cta-hover);
+      flex-direction: column;
+      width: 150px;
+      border-radius: 5px;
+    }
+    .nav-menu.active {
+      display: flex;
+    }
+    .nav-menu li {
+      text-align: left;
+      padding: 0.5rem 1rem;
+    }
+    .hamburger {
+      display: block;
+      color: var(--white);
+    }
+    .language-switch {
+      margin: 0 auto;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .hero-card {
+      padding: 1.5rem;
+    }
+    .hero-text {
+    font-size: 1rem;
+    }
+    .hero-text p {
+      font-size: 0.8rem;
+    }
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-buttons a {
+      width: 80%;
+      max-width: 300px;
+    }
+    .backGroundStory-section-contents {
+      padding: 0 15px;
+    }
+    .tab-menu {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tab-btn {
+      width: 80%;
+      text-align: center;
+    }
+    .project-content {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 5px;
+    }
+    .project-card {
+      min-width: 300px;
+      margin: 0 5px;
+    }
+    .project-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .carousel-btn {
+      opacity: 0.5;
+    }
+    .project-details {
+      width: 80%;
+      margin-top: 10px;
+    }
+    .project-carousel {
+      max-width: 80%;
+    }
+    .skill-card {
+      flex: 0 0 auto;
+    }
+    .faq-item {
+      width: 95%;
+    }
+    #faq h2 {
+      font-size: 2rem;
+    }
+    #step-form {
+      width: 90%;
+      padding: 15px;
+    }
+    .step-btn {
+      font-size: 12px;
+      padding: 8px;
+    }
+    label {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+    .next-btn, .btn-submit {
+      font-size: 14px;
+      padding: 10px;
+    }
+    #contact-form-section {
+      width: 100%;
+      padding: 15px;
+    }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  

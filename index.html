@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuko Yamano | Frontend Developer</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome　アイコンの読み込み -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- jQuery CDN の読み込み -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="slideshow">
+    <img src="img/sky1.jpg" alt="スライド1" class="active">
+    <img src="img/sky1_a.jpg" alt="スライド2">
+    <!-- Hero Title and Subtitle inside the Slideshow -->
+    <div class="hero-text">
+      <h2 id="hero-title" data-key="hero-title">Yuko Yamano</h2>
+      <p id="hero-subtitle" data-key="hero-subtitle">Frontend Developer | Software Tester</p>
+    </div>
+  </header>
+  
+  <nav>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <div class="logo-container">
+      <img src="img/mypicture2.jpg" alt="Yuko_logo">
+    </div>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html#hero" data-key="nav-home">Home</a></li>
+      <li><a href="index.html#about" data-key="nav-about">About Me</a></li>
+      <li><a href="index.html#projects" data-key="nav-projects">Projects</a></li>
+      <li><a href="index.html#skills" data-key="nav-skills">Skills</a></li>
+      <li><a href="index.html#faq" data-key="nav-faq">FAQ</a></li>
+      <li><a href="index.html#step-form" data-key="nav-contact">Contact</a></li>
+    </ul>
+    <div class="language-switch">
+      <img src="img/japanSFlag.png" alt="日本語" id="lang-jp" class="flag-icon">
+      <img src="img/canadaSFlag.png" alt="English" id="lang-en" class="flag-icon">
+    </div>
+  </nav>
+  
+<!-- Hero Section -->
+<section id="hero">
+    <div class="hero-card">
+      <div class="backGroundStory-section-title" data-key="hero-backgroundStory-title">About Me</div>
+      <div class="backGroundStory-section-contents" data-key="hero-backgroundStory-contents"></div>
+  
+      <div class="hero-buttons">
+      
+  
+        <!-- LinkedIn Button -->
+        <button class="icon-btn" id="linkedin-btn"><i class="fab fa-linkedin"></i></button>
+  
+        <!-- GitHub Button -->
+        <button class="icon-btn" id="github-btn"><i class="fab fa-github"></i></button>
+
+          <!-- Projects Button -->
+          <button class="icon-btn" id="projects-btn"><i class="fas fa-folder-open"></i></button>
+  
+        <!-- Contact Button -->
+        <button class="icon-btn" id="contact-btn"><i class="fas fa-envelope"></i></button>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  <!-- 自己紹介 / タブ付きのセクション -->
+  <section id="about">
+    <h2 data-key="about-title">About Me</h2>
+    <!-- タブボタン -->
+    <div class="tab-menu">
+      <button class="tab-btn" data-tab="about1" data-key="about-1-tab">About me</button>
+      <button class="tab-btn active" data-tab="about2" data-key="about-2-tab">My Learning & Certifications</button>
+      <button class="tab-btn" data-tab="about3" data-key="about-3-tab">Career Journey</button>
+    </div>
+    <!-- タブコンテンツ -->
+    <div class="tab-content-wrapper">
+      <div class="tab-content" id="about1" data-key="about-1-content">
+        <p>This is the summary section. Introduce yourself here.</p>
+      </div>
+      <div class="tab-content active" id="about2" data-key="about-2-content">
+        <p>Details about your education will appear here.</p>
+      </div>
+      <div class="tab-content" id="about3" data-key="about-3-content">
+        <p>List your certificates and achievements here.</p>
+      </div>
+      <div class="tab-arrows">
+        <button class="left-arrow">←</button>
+        <button class="right-arrow">→</button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Projectsセクション -->
+  <section id="projects"> 
+    <h2 data-key="projects-title">Projects</h2>
+    <div class="project-container">
+      <div class="project-carousel">
+        <!-- 左の矢印ボタン -->
+        <button class="carousel-btn left-btn">&#9664;</button>
+        <!-- プロジェクトスライド -->
+        <div class="project-slides">
+          <!-- プロジェクト1 -->
+          <div class="project-card" data-project-id="project1">
+            <div class="project-content">
+              <img src="img/NaviGradeScr.png" alt="NaviGrade" class="project-image">
+              <div class="project-details">
+                <h3 data-key="project1-title">Navi Grade</h3>
+                <ul>
+                  <li data-key="project1-list1">学生用タイムマネジメントシステム</li>
+                  <li data-key="project1-list2">MERNスタックで構成されたウェブアプリケーション</li>
+                  <li data-key="project1-list3">AIを使った成績予測</li>
+                </ul>
+                <a href="https://github.com/Avril-TFS/COMP313-002" class="github-link" target="_blank">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <!-- プロジェクト2 -->
+          <div class="project-card" data-project-id="project2">
+            <div class="project-content">
+                <img src="img/SpaceMathsterLogo.png" alt="Project 2" class="project-image">
+                <div class="project-details">
+                    <h3 data-key="project2-title">2</h3>
+                    <ul>
+                        <li data-key="project2-list1">学生用タイムマネジメントシステム</li>
+                        <li data-key="project2-list2">MERNスタックで構成されたウェブアプリケーション</li>
+                        <li data-key="project2-list3">ReactとReact Bootstrapを使用して構築</li>
+                    </ul>
+                    <a href="https://play.google.com/store/apps/details?id=com.FourCyGameStudio.SpaceMathster"  target="_blank">Google Play Store</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- プロジェクト3 -->
+        <div class="project-card" data-project-id="project3">
+            <div class="project-content">
+                <img src="img/SpaceMathster2Logo.png" alt="Project 3" class="project-image">
+                <div class="project-details">
+                    <h3 data-key="project3-title">3</h3>
+                    <ul>
+                        <li data-key="project3-list1">学生用タイムマネジメントシステム</li>
+                        <li data-key="project3-list2">MERNスタックで構成されたウェブアプリケーション</li>
+                        <li data-key="project3-list3">ReactとReact Bootstrapを使用して構築</li>
+                    </ul>
+                    <a href="https://play.google.com/store/apps/details?id=com.FourCYGameStudio.SpaceMath_Two_v2"  target="_blank">Google Play Store</a>
+                   
+
+                </div>
+            </div>
+        </div>
+
+                <!-- プロジェクト4 -->
+                <div class="project-card" data-project-id="project4">
+                    <div class="project-content">
+                        <img src="img/Nimbly1.png" alt="Project 4" class="project-image">
+                        <div class="project-details">
+                            <h3 data-key="project4-title">4</h3>
+                            <ul>
+                                <li data-key="project4-list1">学生用タイムマネジメントシステム</li>
+                                <li data-key="project4-list2">MERNスタックで構成されたウェブアプリケーション</li>
+                                <li data-key="project4-list3">ReactとReact Bootstrapを使用して構築</li>
+                            </ul>
+                            <a href="https://play.google.com/store/apps/details?id=com.FourcyGameStudio.Nimbly"  target="_blank">Google Play Store</a>
+                        </div>
+                    </div>
+                </div>
+
+        <!-- プロジェクト5 -->
+        <div class="project-card" data-project-id="project5">
+            <div class="project-content">
+                <img src="img/RessoLogo.png" alt="Project 5" class="project-image">
+                <div class="project-details">
+                    <h3 data-key="project5-title">5</h3>
+                    <ul>
+                        <li data-key="project5-list1">学生用タイムマネジメントシステム</li>
+                        <li data-key="project5-list2">MERNスタックで構成されたウェブアプリケーション</li>
+                        <li data-key="project5-list3">ReactとReact Bootstrapを使用して構築</li>
+                    </ul>
+                    <!-- <a href="https://play.google.com/store/apps/details?id=com.FourcyGameStudio.Nimbly"  target="_blank">Google Play Store</a> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- プロジェクト6 -->
+        <div class="project-card" data-project-id="project6">
+            <div class="project-content">
+                <img src="img/Testcase.png" alt="testcase" class="project-image">
+                <div class="project-details">
+                    <h3 data-key="project6-title">6</h3>
+                    <ul>
+                        <li data-key="project6-list1">学生用タイムマネジメントシステム</li>
+                        <li data-key="project6-list2">MERNスタックで構成されたウェブアプリケーション</li>
+                        <li data-key="project6-list3">ReactとReact Bootstrapを使用して構築</li>
+                    </ul>
+                    <a href="https://trello.com/b/SlKfiJvO/resolutionapp"  target="_blank">Trello</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- 右の矢印ボタン -->
+        <button class="carousel-btn right-btn">&#9654;</button>
+      </div>
+    </div>
+    <!-- ドットインジケーター -->
+    <div class="carousel-dots">
+      <span class="dot active" data-slide="0"></span>
+      <span class="dot" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+      <span class="dot" data-slide="3"></span>
+      <span class="dot" data-slide="4"></span>
+      <span class="dot" data-slide="5"></span>
+      <span class="dot" data-slide="6"></span>
+    </div>
+    <!-- モーダル構造 -->
+    <div id="project-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <img id="modal-image" src="" alt="Project Image" class="modal-image">
+        <h2 id="modal-title" data-key="modal-title">Project Title</h2>
+        <table class="modal-table">
+          <tr>
+            <th data-key="modal-duration">期間</th>
+            <td id="modal-duration"><span></span></td>
+          </tr>
+          <tr>
+            <th data-key="modal-purpose">目的</th>
+            <td id="modal-purpose"><span></span></td>
+          </tr>
+          <tr>
+            <th data-key="modal-role">役割</th>
+            <td id="modal-role"><span></span></td>
+          </tr>
+          <tr>
+            <th data-key="modal-challenges">課題と乗り越えたこと</th>
+            <td id="modal-challenges"><span></span></td>
+          </tr>
+        </table>
+        <div class="modal-link">
+          <a href="#" id="modal-detail-link" target="_blank" data-key="modal-link">詳細ページへ ➔</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="skills">
+    <h2 data-key="skills-title">Skills</h2>
+    <div class="marquee">
+      <ul class="marquee-content">
+        <li>
+          <div class="skill-card">
+            <img src="img/html5.svg" alt="HTML Icon" class="skill-icon">
+            <p>HTML</p>
+          </div>
+        </li>
+        <li>
+            <div class="skill-card" >
+                <img src="img/css.svg" alt="CSS Icon" class="skill-icon">
+                <p>CSS</p>
+            </div>
+        </li>
+        <li>
+            <div class="skill-card" >
+                <img src="img/javascript.svg" alt="JavaScript Icon" class="skill-icon">
+                <p>JavaScript</p>
+               
+            </div>
+        </li>
+        <li>
+            <div class="skill-card" >
+                <img src="img/react.svg" alt="React Icon" class="skill-icon">
+                <p>React.js</p>
+               
+            </div>
+        </li>
+        <li>
+            <div class="skill-card" >
+                <img src="img/nodedotjs.svg" alt="Node.js Icon" class="skill-icon">
+                <p>Node.js</p>
+               
+            </div>
+        </li>
+        <li>
+            <div class="skill-card" >
+                <img src="img/java-svgrepo-com.svg" alt="Java Icon" class="skill-icon">
+                <p>Java</p>
+             
+            </div>
+        </li>
+        <li>
+            <div class="skill-card">
+                <img src="img/c-logo-icon-28402.png" alt="Csharp Icon" class="skill-icon">
+                <p>C#</p>
+               
+            </div>
+        </li>
+        <li>
+            <div class="skill-card">
+                <img src="img/ISTQBlogo.jpg" alt="ISTQB Icon" class="skill-icon">
+                <p>ISTQB Certified</p>
+            </div>
+        </li>
+        <!--For Clone-->
+        <li>
+            <div class="skill-card" >
+                <img src="img/html5.svg" alt="HTML Icon" class="skill-icon">
+                <p>HTML</p>
+            </div>
+        </li>
+        <li>
+            <div class="skill-card" >
+                <img src="img/css.svg" alt="CSS Icon" class="skill-icon">
+                <p>CSS</p>
+            </div>
+        </li>
+        <li>
+            <div class="skill-card" >
+                <img src="img/javascript.svg" alt="JavaScript Icon" class="skill-icon">
+                <p>JavaScript</p>
+               
+            </div>
+        </li>
+        <li>
+            <div class="skill-card" >
+                <img src="img/react.svg" alt="React Icon" class="skill-icon">
+                <p>React.js</p>
+               
+            </div>
+        </li>
+        <li>
+            <div class="skill-card" >
+                <img src="img/nodedotjs.svg" alt="Node.js Icon" class="skill-icon">
+                <p>Node.js</p>
+               
+            </div>
+        </li>
+        <li>
+            <div class="skill-card" >
+                <img src="img/java-svgrepo-com.svg" alt="Java Icon" class="skill-icon">
+                <p>Java</p>
+             
+            </div>
+        </li>
+
+        <li>
+            <div class="skill-card">
+                <img src="img/c-logo-icon-28402.png" alt="Csharp Icon" class="skill-icon">
+                <p>C#</p>
+               
+            </div>
+        </li>
+        <li>
+            <div class="skill-card">
+                <img src="img/ISTQBlogo.jpg" alt="ISTQB Icon" class="skill-icon">
+                <p>ISTQB Certified</p>
+            </div>
+        </li>
+        
+      </ul>
+    </div>
+  </section>
+  
+  <!-- パララックス -->
+  <!-- <section class="parallax-section">
+    <div class="parallax-content">
+      <h2 data-key="parallax-message">Get in Touch</h2>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/yukoyamano" target="_blank" class="linkedin-btn">
+          <img src="img/LinkedInlogo.png" alt="LinkedIn" width="40" height="40">
+        </a>
+        <a href="https://github.com/YukoYamano" target="_blank" class="github-btn">
+          <img src="img/github.svg" alt="GitHub" width="40" height="40">
+        </a>
+     
+  
+      </div>
+    </div>
+  </section> -->
+
+  <!-- パララックス -->
+<section class="parallax-section">
+    <div class="parallax-content">
+      <h2 data-key="parallax-message">Get in Touch</h2>
+      <div class="social-icons">
+        <!-- LinkedIn Button -->
+        <button class="icon-btn" id="parallax-linkedin-btn"><i class="fab fa-linkedin"></i></button>
+  
+        <!-- GitHub Button -->
+        <button class="icon-btn" id="parallax-github-btn"><i class="fab fa-github"></i></button>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- FAQセクション -->
+  <section id="faq">
+    <h2 data-key="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <button class="faq-question" data-key="faq-q1">
+        <span class="icon"></span>
+        What services do you offer?
+        <span class="toggle-icon">+</span>
+      </button>
+      <div class="faq-answer" data-key="faq-a1">
+        I offer frontend development, website testing, and UX design improvements. I specialize in creating user-friendly and responsive websites.
+      </div>
+    </div>
+    <div class="faq-item">
+        <button class="faq-question" data-key="faq-q2">
+            <span class="icon"></span>
+            How long does it take to complete a project?
+            <span class="toggle-icon">+</span>
+        </button>
+        <div class="faq-answer" data-key="faq-a2">
+            Project timelines vary based on complexity. Small projects typically take 1-2 weeks, while larger projects may take up to a month.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" data-key="faq-q3">
+            <span class="icon"></span>
+            What are your rates?
+            <span class="toggle-icon">+</span>
+        </button>
+        <div class="faq-answer" data-key="faq-a3">
+            Rates depend on the project scope. I offer flexible pricing models, including hourly rates and fixed-price contracts.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" data-key="faq-q4">
+            <span class="icon"></span>
+            Can you update or improve an existing website?
+            <span class="toggle-icon">+</span>
+        </button>
+        <div class="faq-answer" data-key="faq-a4">
+            Absolutely! I can optimize existing websites for better performance, update content, or redesign layouts for a modern look.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" data-key="faq-q5">
+            <span class="icon"></span>
+            How can I get in touch for a project?
+            <span class="toggle-icon">+</span>
+        </button>
+        <div class="faq-answer" data-key="faq-a5">
+            You can reach out to me through the contact form below or connect with me via LinkedIn or GitHub for collaborations.
+        </div>
+    </div>
+  </section>
+  
+  <!-- お問い合わせ（ステップフォーム） -->
+  <section id="step-form">
+    <h2 data-key="step-title">お問い合わせ</h2>
+    <div class="error-message-contact" data-key="error-message-contact"></div>
+    <div class="step-buttons">
+      <button class="step-btn active" data-step="1" data-key="step-1">STEP.1</button>
+      <button class="step-btn" data-step="2" data-key="step-2">STEP.2</button>
+      <button class="step-btn" data-step="3" data-key="step-3">STEP.3</button>
+    </div>
+    <div class="step step-1 active">
+      <h3 data-key="step1-title">あなたについて教えてください</h3>
+      <label><input type="radio" name="user-type" value="個人"> <span data-key="user-individual">個人</span></label>
+      <label><input type="radio" name="user-type" value="法人"> <span data-key="user-business">法人</span></label>
+      <button class="next-btn" data-key="next">次へ進む</button>
+    </div>
+    <div class="step step-2">
+      <h3 data-key="step2-title">何について相談したいですか？</h3>
+      <label><input type="radio" name="consultation" value="Web開発"> <span data-key="consult-web">Web開発</span></label>
+      <label><input type="radio" name="consultation" value="ソフトウェアテスト"> <span data-key="consult-test">ソフトウェアテスト</span></label>
+      <label><input type="radio" name="consultation" value="その他"> <span data-key="consult-other">その他</span></label>
+      <button class="next-btn" data-key="next">次へ進む</button>
+    </div>
+    <div class="step step-3">
+      <h3 data-key="step3-title">お問い合わせフォーム</h3>
+      <form id="contact-form" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+        <label>
+          <span data-key="contact-user-info">あなたの情報</span>
+          <input type="text" id="contact-user-info" name="userinfo" readonly>
+        </label>
+        <label>
+          <span data-key="contact-name">お名前</span>
+          <input type="text" id="contact-name" name="name" required>
+        </label>
+        <label>
+          <span data-key="contact-email">メールアドレス</span>
+          <input type="email" id="contact-email" name="email" required>
+        </label>
+        <label>
+          <span data-key="contact-message">メッセージ</span>
+          <textarea id="contact-message" name="message" required></textarea>
+        </label>
+        <button class="btn-submit" type="submit" data-key="contact-submit">送信</button>
+      </form>
+    </div>
+  </section>
+  
+  <!-- ページトップへ戻るボタン -->
+  <button id="scrollTopBtn" class="scroll-top">▲</button>
+  
+  <!-- フッター -->
+  <footer>
+    <p>&copy; <span id="year"></span> Yuko Yamano. All Rights Reserved.</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
