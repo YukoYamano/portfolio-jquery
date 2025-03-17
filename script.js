@@ -203,7 +203,8 @@ $(function () {
         
        
         "projects-title": "Projects",
-        
+
+        "project-instruction": "Tap to view details",
         "project1-title": "Navi Grade",
         "project1-list1": "A web application that allows students to manage assignments, deadlines, and course information in one place."
                             + "It features a badge system to boost motivation upon task completion and an AI-driven grade prediction system.",
@@ -264,6 +265,19 @@ $(function () {
                             + "<li>Identified and reported over 15 bugs, proposing fixes</li>"
                             + "</ul>",
         "project6-list3": "<strong>Tools Used:</strong> Google Docs, Trello, ScreenPal",
+
+
+        "project7-title": "Alphabet Run",
+        "project7-list1": "A game where you can practice typing while clearing the stage",
+        "project7-list2": "<strong>Description:</strong>"
+                            + "<ul>"
+                            + "<li>Created for the Unity 1-Week Game Jam with the theme '2'</li>"
+                            + "<li>A game that combines typing practice with an auto-scrolling platformer</li>"
+                            + "<li>Received positive feedback from players about the well-balanced difficulty, making them want to play more. </li>"
+                            + "</ul>",
+        "project7-list3": "<strong>Tools Used:</strong> Unity, C#",
+
+
 
 
 
@@ -420,6 +434,7 @@ $(function () {
 ,
        
         "projects-title": "プロジェクト",
+        "project-instruction":"タップで詳細を表示",
        
         "project1-title":"Navi Grade",
         "project1-list1": "学生が課題、締切、コースの情報を一元管理できるWebアプリ。"
@@ -481,6 +496,17 @@ $(function () {
                             + "<li>15件以上のバグを報告し、改善策を提案</li>"
                             + "</ul>",
         "project6-list3": "<strong>使用ツール:</strong> Google Document, Trello, ScreenPal",
+
+        "project7-title": "アルファベットラン",
+        "project7-list1": "画面をクリアしながらタイピング練習ができるゲーム",
+        "project7-list2": "<strong>説明:</strong>"
+                            + "<ul>"
+                            + "<li>Unity1週間ゲームジャムにてテーマが「2」の際に作成</li>"
+                            + "<li>タイピングとオートスクロールプラットフォームゲームを組み合わせたゲーム</li>"
+                            + "<li>クリアできるまで挑戦したくなるとの評価を得た</li>"
+                            + "</ul>",
+        "project7-list3": "<strong>使用ツール:</strong>Unity, C#",
+
 
 
         "modal-title":"タイトル",
@@ -786,7 +812,27 @@ translations.jp["hero-backgroundStory-contents"] = `
                 link: "https://trello.com/b/SlKfiJvO/resolutionapp",
                 image: "img/Testplan.png"
             }
-        }
+        },
+        "project7": {
+          en: {
+              title: "Alphabet RUN",
+              duration:  "1 week",
+              purpose:  "Created for the Unity 1-Week Game Jam",
+              role: "Responsible for everything from game design to implementation",
+              challenge: "Spent a lot of time deciding on the game's concept and direction, resulting in minimal implementation, but it became an engaging and rewarding game to play.",
+              link: "https://yukoyamano.github.io/AlphabetLTS-Build/",
+             image: "img/alphabetRun1a.png"
+          },
+          jp: {
+            title: "アルファベットラン",
+            duration: "1週間",
+            purpose: "Unity 1週間ゲームジャムへの参加",
+            role: "ゲームデザインから実装まで全て担当",
+            challenge: "ゲームのアイデアと方向性を決めるのに時間がかかり、最低限の実装となったが、挑戦しがいのある面白いゲームになった",
+            link: "https://yukoyamano.github.io/AlphabetLTS-Build/",
+            image: "img/alphabetRun1a.png"
+          }
+      }
     };
   
     function showModal(projectKey) {
