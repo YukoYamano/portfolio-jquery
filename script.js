@@ -71,9 +71,8 @@ $(function () {
     $("#year").text(new Date().getFullYear());
   
     /*==============================
-      スクロールアニメーション（IntersectionObserver を利用）
+      スクロールアニメーション
     ==============================*/
-    // IntersectionObserver は jQuery にはないため、こちらはそのまま使用
     var sections = document.querySelectorAll('section');
     var options = { threshold: 0.2 };
     var revealOnScroll = new IntersectionObserver(function (entries, observer) {
@@ -312,9 +311,6 @@ $(function () {
         "next": "Next",
        
         "step3-title": "Contact",
-
-        
-         // `contact.html` の翻訳を追加
          "contact-user-info":"User information",
          "contact-title": "Contact Me",
          "contact-name": "*Your Name",
@@ -322,11 +318,7 @@ $(function () {
          "contact-message": "*Your Message",
          "contact-submit": "Send Message",
          "contact-go-back-button": "Go Back",
-        
-        
         "contact-go-back-button":"Back to Previous Page",
-
-
     },
     jp: {
         "nav-home": "ホーム",
@@ -531,8 +523,6 @@ $(function () {
         "next": "次へ進む",
       
         "step3-title": "お問い合わせ内容",
-
-        // `contact.html` の翻訳を追加
         "contact-title": "お問い合わせ",
         "contact-user-info":"あなたの情報",
         "contact-name": "*お名前",
@@ -545,7 +535,6 @@ $(function () {
     }
 };
 
-// Updated translations for About Me section
 translations.en["hero-backgroundStory-title"] = "My Story";
 translations.jp["hero-backgroundStory-title"] = "私のストーリー";
 
@@ -963,26 +952,26 @@ translations.jp["hero-backgroundStory-contents"] = `
         window.open("https://www.linkedin.com/in/yukoyamano", "_blank");
       });
     
-      // Click event for GitHub button
+    
       $("#github-btn").click(function() {
         window.open("https://github.com/YukoYamano", "_blank");
       });
     
-      // You can also add events for other buttons if needed
+     
       $("#projects-btn").click(function() {
-        window.location.href = "#projects"; // Navigate within the page
+        window.location.href = "#projects"; 
       });
     
       $("#contact-btn").click(function() {
-        window.location.href = "#step-form"; // Navigate to contact form
+        window.location.href = "#step-form"; 
       });
 
-       // Click event for LinkedIn button in the Parallax section
+       
         $("#parallax-linkedin-btn").click(function() {
             window.open("https://www.linkedin.com/in/yukoyamano", "_blank");
         });
 
-        // Click event for GitHub button in the Parallax section
+       
         $("#parallax-github-btn").click(function() {
             window.open("https://github.com/YukoYamano", "_blank");
         });

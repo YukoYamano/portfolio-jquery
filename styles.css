@@ -190,7 +190,6 @@
   }
   
   /* ボタンとアイコン */
- /* Button and Icon Styling */
 .hero-buttons {
     display: flex;
     justify-content: center;
@@ -214,13 +213,13 @@
     transition: all 0.3s ease-in-out;
   }
   
-  /* Hover Effect */
+  
   .icon-btn:hover {
     background-color:var(--accent-color);
     transform: scale(1.1);
   }
   
-  /* FontAwesome Icons */
+
   .icon-btn i {
     font-size: 1.5rem;
   }
@@ -583,14 +582,14 @@
     margin-bottom: 10px;
   }
   
-/* Social Icons Container */
+
 .social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
   }
   
-  /* Common Style for All Buttons */
+
   .icon-btn {
     display: flex;
     align-items: center;
@@ -606,13 +605,13 @@
     transition: all 0.3s ease-in-out;
   }
   
-  /* Hover Effect */
+ 
   .icon-btn:hover {
     background-color: var(--accent-color);
     transform: scale(1.1);
   }
   
-  /* FontAwesome Icons */
+
   .icon-btn i {
     font-size: 1.5rem;
   }
