@@ -780,8 +780,8 @@ translations.jp["hero-backgroundStory-contents"] = `
                 purpose: "Questioning the idea that New Year's resolutions can only be set at the start of the year, I created this app to allow users to start fresh any time.",
                 role: "Solo development, responsible for design, coding, and release.",
                 challenge: "Encrypting user data: Ensured privacy protection via Firebase encryption; debugging the decryption process was a significant challenge.",
-                link: "#",
-                image: "img/Resso.png"
+                link: "https://play.google.com/store/apps/details?id=com.yuko.resolution",
+                image: "img/Reso365_featuregraphic.png"
             },
             jp: {
                 title: "Reso365",
@@ -789,8 +789,8 @@ translations.jp["hero-backgroundStory-contents"] = `
                 purpose: "新年の目標は新年にしか立てられないのか？毎日が新たなスタートでもよいのではないか、という考えから開発。",
                 role:"個人開発、デザインからリリースまで全て担当",
                 challenge: "ユーザー情報の暗号化: Firebase によるデータ暗号化の実装で、復号化に苦労した。",
-                link: "#",
-                image: "img/Resso.png"
+                link: "https://play.google.com/store/apps/details?id=com.yuko.resolution",
+                image: "img/Reso365_featuregraphic.png"
             }
         },
         "project6": {
